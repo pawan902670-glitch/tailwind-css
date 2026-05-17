@@ -1,10 +1,3 @@
-Great ✅
-GitHub README me **Tailwind jaisa design feel** dene ke liye hum badges, spacing, emojis, clean sections use karte hain.
-
-Copy–paste this into your `README.md` 👇
-
----
-
 # 🎨 Tailwind CSS Learning Repository
 
 <p align="center">
