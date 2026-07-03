@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind CSS Setup with CLI</title>
+    <title>Tailwind CSS Navbar</title>
+
     <link rel="stylesheet" href="./output.css">
 </head>
 <body>
-    <h1 class="bg-blue-500 text-white p-4">
-        Tailwind CSS
-    </h1>
+
+    <ul class="bg-black text-white flex gap-6 p-4 list-none  [&>*]:flex ">
+        <li><a href="#" class="hover:text-gray-300">Home</a></li>
+        <li><a href="#" class="hover:text-gray-300">News</a></li>
+        <li><a href="#" class="hover:text-gray-300">About</a></li>
+        <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+    </ul>
+
 </body>
 </html>
