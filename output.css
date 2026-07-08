@@ -35,6 +35,7 @@
     --color-amber-700: oklch(55.5% 0.163 48.998);
     --color-yellow-200: oklch(94.5% 0.129 101.54);
     --color-yellow-500: oklch(79.5% 0.184 86.047);
+    --color-yellow-600: oklch(68.1% 0.162 75.834);
     --color-green-50: oklch(98.2% 0.018 155.826);
     --color-green-100: oklch(96.2% 0.044 156.743);
     --color-green-200: oklch(92.5% 0.084 155.995);
@@ -69,6 +70,7 @@
     --text-8xl: 6rem;
     --text-8xl--line-height: 1;
     --font-weight-bold: 700;
+    --radius-md: 0.375rem;
     --blur-sm: 8px;
     --blur-md: 12px;
     --blur-lg: 16px;
@@ -317,6 +319,9 @@
     @media (width >= 96rem) {
       max-width: 96rem;
     }
+  }
+  .m-4 {
+    margin: calc(var(--spacing) * 4);
   }
   .m-5 {
     margin: calc(var(--spacing) * 5);
@@ -611,6 +616,9 @@
   .overflow-auto {
     overflow: auto;
   }
+  .rounded-md {
+    border-radius: var(--radius-md);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -738,9 +746,6 @@
   .bg-\[url\(\)\] {
     background-image: url();
   }
-  .bg-\[url\(https\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcQ-n0zfkY717RADcVFP5Qwlv6_Xgb6RG3E0CgIZs1OFnIYTn9yw4yDJOCk\&s\=10\)\] {
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-n0zfkY717RADcVFP5Qwlv6_Xgb6RG3E0CgIZs1OFnIYTn9yw4yDJOCk&s=10);
-  }
   .from-blue-500 {
     --tw-gradient-from: var(--color-blue-500);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -792,6 +797,9 @@
   }
   .p-1 {
     padding: var(--spacing);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
@@ -1041,22 +1049,6 @@
     --tw-contrast: contrast(0%);
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
-  .contrast-1 {
-    --tw-contrast: contrast(1%);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .contrast-2 {
-    --tw-contrast: contrast(2%);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .contrast-3 {
-    --tw-contrast: contrast(3%);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
-  .contrast-4 {
-    --tw-contrast: contrast(4%);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
   .contrast-10 {
     --tw-contrast: contrast(10%);
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
@@ -1132,11 +1124,49 @@
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
+  .group-hover\:bg-black {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-black);
+      }
+    }
+  }
+  .group-hover\:text-white {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-white);
+      }
+    }
+  }
+  .hover\:bg-red-500 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-red-500);
+      }
+    }
+  }
+  .hover\:p-5 {
+    &:hover {
+      @media (hover: hover) {
+        padding: calc(var(--spacing) * 5);
+      }
+    }
+  }
   .hover\:text-gray-300 {
     &:hover {
       @media (hover: hover) {
         color: var(--color-gray-300);
       }
+    }
+  }
+  .focus\:bg-yellow-600 {
+    &:focus {
+      background-color: var(--color-yellow-600);
+    }
+  }
+  .active\:bg-red-500 {
+    &:active {
+      background-color: var(--color-red-500);
     }
   }
   .\[\&\>\*\]\:flex {
