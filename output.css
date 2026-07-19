@@ -29,6 +29,7 @@
     --color-orange-800: oklch(47% 0.157 37.304);
     --color-orange-900: oklch(40.8% 0.123 38.172);
     --color-amber-50: oklch(98.7% 0.022 95.277);
+    --color-amber-100: oklch(96.2% 0.059 95.617);
     --color-amber-300: oklch(87.9% 0.169 91.605);
     --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-amber-500: oklch(76.9% 0.188 70.08);
@@ -52,8 +53,10 @@
     --color-blue-300: oklch(80.9% 0.105 251.813);
     --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-blue-950: oklch(28.2% 0.091 267.935);
+    --color-purple-500: oklch(62.7% 0.265 303.9);
     --color-pink-200: oklch(89.9% 0.061 343.231);
     --color-pink-400: oklch(71.8% 0.202 349.761);
+    --color-pink-500: oklch(65.6% 0.241 354.308);
     --color-slate-400: oklch(70.4% 0.04 256.788);
     --color-slate-500: oklch(55.4% 0.046 257.417);
     --color-gray-200: oklch(92.8% 0.006 264.531);
@@ -78,8 +81,6 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
@@ -375,9 +376,6 @@
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
   }
-  .mt-32 {
-    margin-top: calc(var(--spacing) * 32);
-  }
   .mr-5 {
     margin-right: calc(var(--spacing) * 5);
   }
@@ -482,10 +480,6 @@
     width: calc(var(--spacing) * 64);
     height: calc(var(--spacing) * 64);
   }
-  .size-67 {
-    width: calc(var(--spacing) * 67);
-    height: calc(var(--spacing) * 67);
-  }
   .size-80 {
     width: calc(var(--spacing) * 80);
     height: calc(var(--spacing) * 80);
@@ -549,6 +543,9 @@
   }
   .h-30 {
     height: calc(var(--spacing) * 30);
+  }
+  .h-32 {
+    height: calc(var(--spacing) * 32);
   }
   .h-40 {
     height: calc(var(--spacing) * 40);
@@ -630,6 +627,9 @@
   }
   .w-30 {
     width: calc(var(--spacing) * 30);
+  }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
   }
   .w-40 {
     width: calc(var(--spacing) * 40);
@@ -874,6 +874,15 @@
   .gap-16 {
     gap: calc(var(--spacing) * 16);
   }
+  .gap-x-10 {
+    column-gap: calc(var(--spacing) * 10);
+  }
+  .gap-x-20 {
+    column-gap: calc(var(--spacing) * 20);
+  }
+  .gap-y-10 {
+    row-gap: calc(var(--spacing) * 10);
+  }
   .overflow-auto {
     overflow: auto;
   }
@@ -911,6 +920,9 @@
     border-style: var(--tw-border-style);
     border-width: 8px;
   }
+  .bg-amber-100 {
+    background-color: var(--color-amber-100);
+  }
   .bg-amber-300 {
     background-color: var(--color-amber-300);
   }
@@ -944,9 +956,6 @@
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
-  .bg-green-100 {
-    background-color: var(--color-green-100);
-  }
   .bg-green-200 {
     background-color: var(--color-green-200);
   }
@@ -974,8 +983,17 @@
   .bg-orange-400 {
     background-color: var(--color-orange-400);
   }
+  .bg-orange-800 {
+    background-color: var(--color-orange-800);
+  }
   .bg-pink-200 {
     background-color: var(--color-pink-200);
+  }
+  .bg-pink-500 {
+    background-color: var(--color-pink-500);
+  }
+  .bg-purple-500 {
+    background-color: var(--color-purple-500);
   }
   .bg-red-200 {
     background-color: var(--color-red-200);
@@ -1007,6 +1025,9 @@
   .bg-yellow-200 {
     background-color: var(--color-yellow-200);
   }
+  .bg-yellow-500 {
+    background-color: var(--color-yellow-500);
+  }
   .bg-gradient-to-b {
     --tw-gradient-position: to bottom in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
@@ -1021,9 +1042,6 @@
   }
   .bg-\[url\(\'https\:\/\/encrypted-tbn0\.gstatic\.com\/images\?q\=tbn\:ANd9GcQ-n0zfkY717RADcVFP5Qwlv6_Xgb6RG3E0CgIZs1OFnIYTn9yw4yDJOCk\&s\=10\'\)\] {
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-n0zfkY717RADcVFP5Qwlv6_Xgb6RG3E0CgIZs1OFnIYTn9yw4yDJOCk&s=10');
-  }
-  .bg-\[url\(\'https\:\/\/media\.istockphoto\.com\/id\/2207141986\/photo\/ai-governance-and-responsive-generative-artificial-intelligence-use-compliance-strategy-and\.jpg\?s\=612x612\&w\=0\&k\=20\&c\=JK0ezw-lui-0gxbKB2rWqUMD3gza0pUI_aeb7-GkFBI\=\'\)\] {
-    background-image: url('https://media.istockphoto.com/id/2207141986/photo/ai-governance-and-responsive-generative-artificial-intelligence-use-compliance-strategy-and.jpg?s=612x612&w=0&k=20&c=JK0ezw-lui-0gxbKB2rWqUMD3gza0pUI_aeb7-GkFBI=');
   }
   .bg-\[url\(\'image\'\)\] {
     background-image: url('image');
@@ -1041,28 +1059,12 @@
     --tw-gradient-from: var(--color-blue-500);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
-  .from-green-500 {
-    --tw-gradient-from: var(--color-green-500);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
   .from-red-500 {
     --tw-gradient-from: var(--color-red-500);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .to-green-500 {
     --tw-gradient-to: var(--color-green-500);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .to-red-400 {
-    --tw-gradient-to: var(--color-red-400);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .to-red-500 {
-    --tw-gradient-to: var(--color-red-500);
-    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
-  }
-  .to-red-700 {
-    --tw-gradient-to: var(--color-red-700);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
   .to-yellow-500 {
@@ -1126,6 +1128,9 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
+  .pt-4 {
+    padding-top: calc(var(--spacing) * 4);
+  }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
   }
@@ -1146,10 +1151,6 @@
   }
   .text-center {
     text-align: center;
-  }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-3xl {
     font-size: var(--text-3xl);
@@ -1259,6 +1260,9 @@
   }
   .text-orange-900 {
     color: var(--color-orange-900);
+  }
+  .text-pink-500 {
+    color: var(--color-pink-500);
   }
   .text-red-50 {
     color: var(--color-red-50);
