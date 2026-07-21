@@ -10,3 +10,13 @@
     padding: 20px;
     border-radius: 10px;
 }
+@theme{
+    --padding-10:100px;
+    --padding-2:50px;
+    --margin-1:50px
+    --padding-class-50:50px;
+    --padding-wrapper:50px;
+    --margin-m:30px;
+    --height-1:50px;
+
+}
