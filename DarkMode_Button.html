@@ -1,0 +1,80 @@
+```html
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./output.css">
+
+    <title>Dark Mode Test</title>
+</head>
+
+<body class="min-h-screen bg-white text-black dark:bg-slate-900 dark:text-white">
+
+    <div class="p-10">
+
+        <h1 class="text-5xl font-bold">
+            Tailwind CSS Dark Mode
+        </h1>
+
+        <p class="mt-4 text-2xl">
+            Click the button to change the theme.
+        </p>
+
+        <!-- Button -->
+        <button
+            id="themeButton"
+            class="mt-8 rounded-lg bg-black px-6 py-3 text-white dark:bg-white dark:text-black"
+        >
+            🌙 Dark Mode
+        </button>
+
+
+        <!-- Box -->
+        <div
+            class="mt-10 rounded-lg border border-gray-300 bg-gray-100 p-10 dark:border-gray-600 dark:bg-slate-700"
+        >
+
+            <div class="size-20 rounded bg-blue-300 dark:bg-blue-700">
+            </div>
+
+            <p class="mt-5 text-2xl">
+                Box with Dark Mode
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        const themeButton = document.getElementById("themeButton");
+
+        themeButton.addEventListener("click", function () {
+
+            // Add / Remove dark class
+            document.documentElement.classList.toggle("dark");
+
+            // Check current mode
+            if (document.documentElement.classList.contains("dark")) {
+
+                themeButton.innerHTML = "☀️ Light Mode";
+
+            } else {
+
+                themeButton.innerHTML = "🌙 Dark Mode";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
+```

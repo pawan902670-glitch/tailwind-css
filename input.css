@@ -5,6 +5,7 @@
     --breakpoint-lg:1000px;
     --breakpoint-big:800px;
 }*/
+@custom-varient dark (&:where(.dark, .dark*));
 .box {
     background-color: yellow;
     padding: 20px;
