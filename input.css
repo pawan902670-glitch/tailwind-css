@@ -1,10 +1,10 @@
-@import "tailwindcss";
-/*@theme{
+/*@import "tailwindcss";
+@theme{
     --breakpoint-sm:700px;
     --breakpoint-md:900px;
     --breakpoint-lg:1000px;
     --breakpoint-big:800px;
-}*/
+}
 @custom-varient dark (&:where(.dark, .dark*));
 .box {
     background-color: yellow;
@@ -20,4 +20,41 @@
     --margin-m:30px;
     --height-1:50px;
 
+}*/
+
+@import "tailwindcss";
+/*@layer base {
+    h1 {
+        font-size: 50px;
+    }
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    button{
+        border:1px solid #999;
+        padding:3px
+    }
+}
+@layer base {
+  h1 {
+    @apply text-9xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+  
+    @apply text-5xl;
+  }
+  button {
+    @apply border;
+  }
+}*/
+@layer components{
+    .btn-primary{
+        @apply bg-blue-500 rounded text-white p-2 hover:bg-blue-700
+    }
 }
