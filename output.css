@@ -515,6 +515,13 @@
   .inline-block {
     display: inline-block;
   }
+  .table {
+    display: table;
+  }
+  .size-1 {
+    width: var(--spacing);
+    height: var(--spacing);
+  }
   .size-1\/2 {
     width: calc(1 / 2 * 100%);
     height: calc(1 / 2 * 100%);
@@ -604,8 +611,14 @@
   .h-1\/9 {
     height: calc(1 / 9 * 100%);
   }
+  .h-2 {
+    height: calc(var(--spacing) * 2);
+  }
   .h-2\/3 {
     height: calc(2 / 3 * 100%);
+  }
+  .h-3 {
+    height: calc(var(--spacing) * 3);
   }
   .h-3\/4 {
     height: calc(3 / 4 * 100%);
@@ -678,6 +691,9 @@
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-1 {
+    width: var(--spacing);
   }
   .w-1\/2 {
     width: calc(1 / 2 * 100%);
@@ -763,6 +779,9 @@
   .min-w-100 {
     min-width: calc(var(--spacing) * 100);
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .scale-150 {
     --tw-scale-x: 150%;
     --tw-scale-y: 150%;
@@ -810,6 +829,9 @@
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .list-none {
     list-style-type: none;
@@ -1559,6 +1581,9 @@
   .text-black {
     color: var(--color-black);
   }
+  .text-blue-400 {
+    color: var(--color-blue-400);
+  }
   .text-blue-500 {
     color: var(--color-blue-500);
   }
@@ -1907,6 +1932,9 @@
     outline-style: none;
   }
   @media (hover: hover) {
+    .group-hover\:block:is(:where(.group):hover *) {
+      display: block;
+    }
     .group-hover\:translate-y-2:is(:where(.group):hover *) {
       --tw-translate-y: calc(var(--spacing) * 2);
       translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -1925,6 +1953,9 @@
     }
     .group-hover\:bg-blue-500:is(:where(.group):hover *) {
       background-color: var(--color-blue-500);
+    }
+    .group-hover\:text-blue-500:is(:where(.group):hover *) {
+      color: var(--color-blue-500);
     }
     .group-hover\:text-white:is(:where(.group):hover *) {
       color: var(--color-white);
@@ -2041,6 +2072,12 @@
     }
     .hover\:p-5:hover {
       padding: calc(var(--spacing) * 5);
+    }
+    .hover\:text-blue-500:hover {
+      color: var(--color-blue-500);
+    }
+    .hover\:text-blue-600:hover {
+      color: var(--color-blue-600);
     }
     .hover\:text-gray-300:hover {
       color: var(--color-gray-300);
