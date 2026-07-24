@@ -1,4 +1,5 @@
 /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
 @layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
@@ -83,9 +84,9 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
-    --breakpoint-sm: 40rem;
-    --breakpoint-md: 48rem;
-    --breakpoint-lg: 64rem;
+    --breakpoint-sm: 700px;
+    --breakpoint-md: 900px;
+    --breakpoint-lg: 1000px;
     --container-3xs: 16rem;
     --container-2xs: 18rem;
     --container-xs: 20rem;
@@ -156,7 +157,8 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --spacing-custom: 32px;
+    --breakpoint-big: 800px;
+    --font-moonDance: "Moon Dance", "cursive";
   }
 }
 @layer base {
@@ -391,14 +393,17 @@
   }
   .container {
     width: 100%;
-    @media (width >= 40rem) {
-      max-width: 40rem;
+    @media (width >= 700px) {
+      max-width: 700px;
     }
-    @media (width >= 48rem) {
-      max-width: 48rem;
+    @media (width >= 800px) {
+      max-width: 800px;
     }
-    @media (width >= 64rem) {
-      max-width: 64rem;
+    @media (width >= 900px) {
+      max-width: 900px;
+    }
+    @media (width >= 1000px) {
+      max-width: 1000px;
     }
     @media (width >= 80rem) {
       max-width: 80rem;
@@ -1478,6 +1483,9 @@
   .font-mono {
     font-family: var(--font-mono);
   }
+  .font-moonDance {
+    font-family: var(--font-moonDance);
+  }
   .font-sans {
     font-family: var(--font-sans);
   }
@@ -2155,7 +2163,7 @@
     --tw-shadow: 0 0 #0000;
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  @media (width >= 40rem) {
+  @media (width >= 700px) {
     .sm\:columns-2 {
       columns: 2;
     }
@@ -2172,8 +2180,27 @@
       font-size: var(--text-4xl);
       line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
+    .sm\:text-blue-500 {
+      color: var(--color-blue-500);
+    }
   }
-  @media (width >= 48rem) {
+  @media (width >= 800px) {
+    .big\:bg-black {
+      background-color: var(--color-black);
+    }
+    .big\:text-2xl {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+    .big\:text-xl {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+    .big\:text-green-500 {
+      color: var(--color-green-500);
+    }
+  }
+  @media (width >= 900px) {
     .md\:w-1\/2 {
       width: calc(1 / 2 * 100%);
     }
@@ -2215,8 +2242,14 @@
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
+    .md\:text-blue-500 {
+      color: var(--color-blue-500);
+    }
+    .md\:text-yellow-500 {
+      color: var(--color-yellow-500);
+    }
   }
-  @media (width >= 64rem) {
+  @media (width >= 1000px) {
     .lg\:w-1\/3 {
       width: calc(1 / 3 * 100%);
     }
@@ -2248,6 +2281,12 @@
     .lg\:text-6xl {
       font-size: var(--text-6xl);
       line-height: var(--tw-leading, var(--text-6xl--line-height));
+    }
+    .lg\:text-green-500 {
+      color: var(--color-green-500);
+    }
+    .lg\:text-purple-500 {
+      color: var(--color-purple-500);
     }
   }
   @media (width >= 80rem) {
@@ -2353,94 +2392,6 @@
   }
   .\[\&\>\*\]\:p-4 > * {
     padding: calc(var(--spacing) * 4);
-  }
-}
-@layer component {
-  .btn {
-    border-radius: 0.25rem;
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-    border-color: var(--color-slate-400);
-    padding-inline: calc(var(--spacing) * 5);
-    padding-block: calc(var(--spacing) * 1.5);
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-slate-500);
-      }
-    }
-  }
-  .btn-primary {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-    border-color: var(--color-blue-500);
-    background-color: var(--color-blue-500);
-    color: var(--color-white);
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-blue-400);
-      }
-    }
-  }
-  .btn-secondary {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-    border-color: var(--color-slate-500);
-    background-color: var(--color-slate-500);
-    color: var(--color-white);
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-slate-900);
-      }
-    }
-  }
-  .btn-sucesss {
-    border-color: var(--color-green-100);
-    background-color: var(--color-green-500);
-    color: var(--color-white);
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-green-900);
-      }
-    }
-  }
-}
-.custom-container {
-  background-color: var(--color-green-500);
-}
-@media screen and (min-width: 768px) {
-  .custom-container {
-    padding: var(--spacing-custom);
-  }
-}
-.G {
-  width: calc(var(--spacing) * 80);
-  border-radius: 0.25rem;
-  border-style: var(--tw-border-style);
-  border-width: 2px;
-  border-color: var(--color-blue-300);
-  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
-  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-  transition-duration: var(--tw-duration, var(--default-transition-duration));
-  --tw-duration: 1000ms;
-  transition-duration: 1000ms;
-  &:hover {
-    @media (hover: hover) {
-      --tw-scale-x: 110%;
-      --tw-scale-y: 110%;
-      --tw-scale-z: 110%;
-      scale: var(--tw-scale-x) var(--tw-scale-y);
-    }
-  }
-  &:hover {
-    @media (hover: hover) {
-      border-color: var(--color-blue-300);
-    }
-  }
-  &:hover {
-    @media (hover: hover) {
-      --tw-brightness: brightness(125%);
-      filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-    }
   }
 }
 @property --tw-scale-x {
